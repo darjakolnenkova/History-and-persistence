@@ -8,12 +8,10 @@ class KmMileConverterController {
   Future<double> convertKmToMiles(double km) async {
     double result = km * 0.621371;
 
-    // Format the record
     String expression = "$km км";
     String resultText = "${result.toStringAsFixed(2)} миль";
     String timestamp = DateFormat('yyyy-MM-dd HH:mm').format(DateTime.now());
 
-    // Save to SQLite
     final record = CalculationRecord(
       expression: expression,
       result: resultText,
@@ -25,8 +23,8 @@ class KmMileConverterController {
   }
 
   void onEqualsPressed() {
-    String expression = '4 * 5'; // this should come from your UI input
-    String result = '20';        // this is your calculated result
+    String expression = '4 * 5';
+    String result = '20';
 
     DatabaseHelper.instance.saveCalculationToHistory(expression, result);
   }

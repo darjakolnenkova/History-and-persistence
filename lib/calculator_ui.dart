@@ -3,7 +3,7 @@ import 'km_to_mile_converter.dart';
 import 'calculator_model.dart';
 import 'controller.dart';
 import 'history_screen.dart';
-import 'database.dart'; // Import DatabaseHelper
+import 'database.dart';
 
 class CalculatorApp extends StatelessWidget {
   const CalculatorApp({Key? key}) : super(key: key);
